@@ -1,0 +1,126 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to bottom, #0e0e0e, #121212);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./fundo/fundo.png'); /* opcional */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* CONTAINER */
+.login-container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 119, 255, 0.2);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease forwards;
+}
+
+/* LOGO */
+.logo-area {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.logo-area h2 {
+  color: #00cfff;
+  font-size: 24px;
+}
+
+/* TOGGLE */
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-btn.active {
+  color: #00cfff;
+  border-bottom: 2px solid #00cfff;
+}
+
+/* FORMULÁRIOS */
+.form {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form.active {
+  display: flex;
+}
+
+.form input {
+  padding: 14px;
+  border: 2px solid #0077ff;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.form input:focus {
+  border-color: #00cfff;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+.form button {
+  padding: 14px;
+  background: linear-gradient(135deg, #00cfff, #0077ff);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 12px rgba(0, 119, 255, 0.3);
+}
+
+.form button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

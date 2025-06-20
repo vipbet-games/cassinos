@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adicionar Saldo - Casino Royale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="saldo.css"/>
+</head>
+<body>
+
+  <div class="saldo-container">
+    <div class="form-box">
+      <div class="logo-area">
+        <img src="./logo/LOGO.png" alt="Logo" class="logo" />
+        <h2>Adicionar Saldo</h2>
+      </div>
+
+      <form id="saldo-form" class="form" onsubmit="mostrarPix(event)">
+        <input type="email" placeholder="Seu e-mail" required />
+        <input type="tel" placeholder="Telefone (com DDD)" required />
+        <input type="text" placeholder="CPF (apenas números)" required />
+        <input type="number" placeholder="Valor a adicionar (R$)" required />
+        <button type="submit">Gerar Pix</button>
+      </form>
+
+      <div class="pix-box" id="pix-box">
+        <h3>Escaneie o QR Code para pagamento</h3>
+        <img src="./qr code/Imagem do WhatsApp de 2025-06-19 à(s) 01.41.35_2d4aa91b.jpg" alt="QR Code" class="qrcode" />
+        <p><strong>Chave Pix:</strong> f7b3ea97-b4e1-406a-8a8c-b620efabd820</p>
+        <p class="obs">* O saldo será creditado automaticamente após o pagamento.</p>
+
+        <!-- BOTÃO DE ENVIO DE COMPROVANTE -->
+        <button class="btn-comprovante" onclick="window.location.href='loop.html'">
+          Enviar Comprovante
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function mostrarPix(e) {
+      e.preventDefault();
+      document.getElementById('pix-box').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>
